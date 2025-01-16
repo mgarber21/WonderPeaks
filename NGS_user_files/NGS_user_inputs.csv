@@ -1,0 +1,12 @@
+﻿,User Inputs,user notes
+genome_directory,/data/sharedfiles/Ca22genome_Aallele/,directory of species genome
+genome_fasta_file,C_albicans_SC5314_version_A22-s07-m01-r105_chromosomes_A.fasta,fasta file of species genome (must be single allele genome)
+genome_annotations_file,Candida_albicansGCA000182965v3.52_tuchntar.gtf,annotation file for species genome - be sure chromosome names in fasta file match chromosome names in annotations file
+g,gene_id,"attribute used by featurecounts(e.g. gene_id="""") or wonderpeaks"
+reads,R1,"whether to include R1 only or R1 and R2, typically we use R1 only; serated by a semicolon (e.g. R1 or R1, R2)"
+librarykit,QuantSeq,choose between QuantSeq and Corall (Corall uses -U for unique molecular identifier)
+adapter_sequence,None,whether to indicate a specific adapter sequence
+data_directory,/data/Megan/NGS_processing/Example_ChIP,"folder with subfolder name ""raw_data."" Raw data to be processed should be inside ""raw_data"" subdirectory"
+include_transcripts_above,None,
+include_transcripts_below,None,
+designfactor,Cell_type;Sample_type, columns in metadata file to use as sample references separated by a semicolon (;)
