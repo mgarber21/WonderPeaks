@@ -17,12 +17,11 @@ maintainers = [
 
 description = "functions for peakcalling enriched peaks in ChIP-seq and untranslateed regions in 3'RNA-seq in Fungi"
 readme = "README.md"
-license = "MIT"
-license-files = ["LICEN[CS]E.*"]
+license = { text = "MIT" }
 keywords = ["ChIP-seq", "RNA-seq", "NGS", "WonderPeaks", "peak calling", "UTR", "dynamic UTR", "Fungi", "Yeast"]
 
 classifiers = [
-  "Development Status :: Beta",
+  "Development Status :: 4 - Beta",
   "Programming Language :: Python"
 ]
 
