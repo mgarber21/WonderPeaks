@@ -175,3 +175,4 @@ dependencies:
   - zstd==1.5.5=hfc55251_0
   - mscorefonts
   - subread
+  - seaborn==0.12.2
