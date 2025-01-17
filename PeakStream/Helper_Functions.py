@@ -205,22 +205,26 @@ def get_basename(filename):
     
     return basename
 
-def metadata_upload(directory,designfactor,
+def metadata_upload(directory,designfactors,
                     meta_delim_whitespace = False,
                     meta_index_col = None):
-        
+    designfactors = designfactors.split(";")
     meta_file_path = os.path.join(directory, "NGS_user_metadata.csv")
     metadata = pd.read_csv(meta_file_path,
                 delim_whitespace=meta_delim_whitespace, 
                 index_col=meta_index_col)\
                 .rename_axis(mapper= None,axis=0)
-
+                
     metadata["basename"] =  metadata.apply(lambda row:
                         get_basename(row["rawdata_filename"]), axis =1)
+    if len(designfactors)>1:
+        designfactor_col = "_".join(designfactors)
+        metadata["_".join(designfactors)] = [
+                "_".join(str(row[designfactor]) for designfactor in designfactors) 
+                for _, row in metadata.iterrows()
+            ]
+        return metadata, designfactor_col
+    else:
+        designfactor_col = designfactors[0]
 
-
-    metadata["StrainCondition"] = metadata.apply(lambda row: f"{row['Strain']}_{row['Condition']}", axis=1)
-    metadata["SampleCondition"] = metadata.apply(lambda row: f"{row['Sample']}_{row['Condition']}", axis=1)
-    metadata["SampleStrain"] = metadata.apply(lambda row: f"{row['Strain']}_{row['Sample']}", axis=1)
-
-    return metadata
+        return metadata, designfactor_col

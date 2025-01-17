@@ -14,12 +14,12 @@ import math
 from Bio.SeqIO.FastaIO import SimpleFastaParser
 
 
-from WonderPeaks.PeakStream.Helper_Functions import *
 from WonderPeaks.PeakStream.AT_stretches import *
 from WonderPeaks.PeakStream.WonderPeaks4UTRs import *
 from WonderPeaks.PeakStream.PeakLinks import *
 from WonderPeaks.PeakStream.PeakFlags import *
 from WonderPeaks.PeakStream.feature_counts import *
+from WonderPeaks.PeakStream.Helper_Functions import *
 
 
 
@@ -57,6 +57,7 @@ class PeakStream(PeakStreamFlag):
         self.PS_data_output = os.path.join(self.PS_directory, "PeakStream_new_coordinates_data.csv")
         self.User_inputs_dict = User_inputs_dict
         self.designfactor = self.User_inputs_dict["designfactor"]
+        
         self.rerun = rerun
         self.gene_biotypes = [i.strip(" ") for i in gene_biotypes.split(";")]
 
@@ -301,7 +302,7 @@ class PeakStream(PeakStreamFlag):
 
         """
 
-        metadata =  metadata_upload(self.directory,self.designfactor,
+        metadata, designfacto_col =  metadata_upload(self.directory,self.designfactor,
                     meta_delim_whitespace = False,
                     meta_index_col = None)
         
@@ -327,7 +328,7 @@ class PeakStream(PeakStreamFlag):
         CDS_counts_melt_merge = pd.merge(CDS_counts_melt, metadata, on = "basename")
         
         # gets the median count value across each designfactors
-        CDS_counts_median = pd.DataFrame(CDS_counts_melt_merge.groupby(ID_cols+[self.designfactor])["count"].median()).reset_index()
+        CDS_counts_median = pd.DataFrame(CDS_counts_melt_merge.groupby(ID_cols+[designfacto_col])["count"].median()).reset_index()
 
         # gets the maximum median counts across all experiments for each gene
         CDS_counts_max_median = pd.DataFrame(CDS_counts_median.groupby(ID_cols)["count"].max()).reset_index()
