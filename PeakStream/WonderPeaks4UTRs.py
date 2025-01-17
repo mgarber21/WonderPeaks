@@ -16,7 +16,7 @@ import seaborn as sns
 import math
 from Bio.SeqIO.FastaIO import SimpleFastaParser
 
-from PeakStream.Helper_Functions import *
+from WonderPeaks.PeakStream.Helper_Functions import *
 
 class WonderPeaks_4UTRs():
     """

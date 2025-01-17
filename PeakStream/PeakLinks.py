@@ -13,12 +13,12 @@ import math
 from Bio.SeqIO.FastaIO import SimpleFastaParser
 
 # from Helper_Functions import *
-from PeakStream.AT_stretches import *
-from PeakStream.WonderPeaks4UTRs import *
+from WonderPeaks.PeakStream.AT_stretches import *
+from WonderPeaks.PeakStream.WonderPeaks4UTRs import *
 
 # Parent_directory = os.path.dirname(os.getcwd())  # Parent file's directory
 # sys.path.insert(0, Parent_directory)
-from .Helper_Functions import *
+from WonderPeaks.Helper_Functions import *
 
 
 class PeakStreamLinks(ATstretches, WonderPeaks_4UTRs):

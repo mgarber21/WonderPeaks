@@ -28,9 +28,9 @@ from collections import defaultdict
 # import math
 from itertools import combinations, permutations, groupby
 
-from user_inputs import *
-from Helper_Functions import *
-from WonderPeaks.WonderPeaks4ChIP import *
+from WonderPeaks.user_inputs import *
+from WonderPeaks.Helper_Functions import *
+from WonderPeaks.WonderPeaks.WonderPeaks4ChIP import *
 
 
 class Filter_WonderPeaks(WonderPeaks4ChIP):

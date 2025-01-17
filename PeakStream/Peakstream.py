@@ -14,12 +14,12 @@ import math
 from Bio.SeqIO.FastaIO import SimpleFastaParser
 
 
-from PeakStream.Helper_Functions import *
-from PeakStream.AT_stretches import *
-from PeakStream.WonderPeaks4UTRs import *
-from PeakStream.PeakLinks import *
-from PeakStream.PeakFlags import *
-from PeakStream.feature_counts import *
+from WonderPeaks.PeakStream.Helper_Functions import *
+from WonderPeaks.PeakStream.AT_stretches import *
+from WonderPeaks.PeakStream.WonderPeaks4UTRs import *
+from WonderPeaks.PeakStream.PeakLinks import *
+from WonderPeaks.PeakStream.PeakFlags import *
+from WonderPeaks.PeakStream.feature_counts import *
 
 
 

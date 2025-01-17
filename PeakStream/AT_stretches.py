@@ -8,7 +8,7 @@ from Bio.SeqIO.FastaIO import SimpleFastaParser
 
 # Parent_directory = os.path.dirname(os.getcwd())  # Parent file's directory
 # sys.path.insert(0, Parent_directory)
-from .Helper_Functions import *
+from WonderPeaks.Helper_Functions import *
 
 
 class ATstretches():

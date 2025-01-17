@@ -17,7 +17,7 @@ from scipy.signal import argrelextrema
 
 import math
 
-from Helper_Functions import *
+from WonderPeaks.Helper_Functions import *
 
 
 class WonderPeaks4ChIP():
