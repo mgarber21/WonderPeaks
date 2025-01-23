@@ -156,7 +156,6 @@ WonderPeaks and PeakStream workflows require all data (raw and processed) to be 
     - `designfactor2`: Specify a second design factor relevant to the experimental design (e.g., strain or epitope).
 3. Save the updated file to the data directory.
 
-![WonderPeaks Workflow](figures/example_inputs.png)
 
 **CAUTION:**
 - Design factor columns must not include unique replicate numbers.
