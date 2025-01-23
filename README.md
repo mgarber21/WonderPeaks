@@ -1,13 +1,13 @@
 # WonderPeaks
 
 <div style="text-align: center;">
-    <h3>WonderPeaks Workflow</h3>
-    <img src="figures/WonderPeaks_logo.png" alt="WonderPeaks" style="width: 45%;">
+    <h3>WonderPeaks</h3>
+    <img src="figures/WonderPeaks_logo.png" alt="WonderPeaks" style="width: 30%;">
 </div>
 
 <div style="text-align: center;">
-    <h3>PeakStream Workflow</h3>
-    <img src="figures/PeakStream_logo.png" alt="PeakStream" style="width: 45%;">
+    <h3>PeakStream</h3>
+    <img src="figures/PeakStream_logo.png" alt="PeakStream" style="width: 30%;">
 </div>
 
 WonderPeaks, a computational tool for analyzing RNA-seq (with poly-adenylation priming) and ChIP-seq data. WonderPeaks successfully identifies peaks (read pileups) in sequencing data, enabling the characterization of untranslated region boundaries in RNA-seq and detecting chromatin enrichment in ChIP-seq, providing valuable insights for fungal pathogen research.
