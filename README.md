@@ -130,11 +130,11 @@ WonderPeaks and PeakStream workflows require all data (raw and processed) to be 
     mv current/data/path/*fastq* /path/to/your/data/raw_data
     ```
 
-## Create User Inputs File (user_input.csv)
+## Create User Inputs File (NGS_user_input.csv)
 
 ### Steps
 
-1. Download the template `user_input.csv` from the WonderPeaks GitHub repository.
+1. Download the template `NGS_user_input.csv` from the WonderPeaks GitHub repository. See the `NGS_user_files` directory.
 2. Update fields in the file:
     - `Data directory`: `/path/to/your/data`
     - `Genome directory`: `/path/to/your/genome`
@@ -144,11 +144,11 @@ WonderPeaks and PeakStream workflows require all data (raw and processed) to be 
 
 **CAUTION:** Do not change the file name. WonderPeaks will only recognize this file if it is named `user_input.csv`.
 
-## Create Metadata File (metadata.csv)
+## Create Metadata File (NGS_user_metadata.csv)
 
 ### Steps
 
-1. Download the template `metadata.csv` from the WonderPeaks GitHub repository.
+1. Download the template `NGS_user_metadata.csv ` from the WonderPeaks GitHub repository. See the `NGS_user_files` directory.
 2. Update fields in the file:
     - `file`: File name (no spaces; must include file extension but not absolute path).
     - `bedgraph`: Specify inclusion in PeakStream (`TRUE` or `FALSE`).
@@ -174,7 +174,7 @@ Skip to `WonderPeaks for ChIPseq` or `PeakStream for 3’RNAseq` if using custom
 
 1. Precheck:
     - Confirm all `.bedgraph` files are in the `bedgraphout` subdirectory of your data directory.
-    - Confirm `designfactors` in `user_input.csv` match `metadata.csv`.
+    - Confirm `designfactors` in `NGS_user_input.csv` match `NGS_user_metadata.csv`.
 2. Open the `WP4ChIP.ipynb` Jupyter Notebook.
 3. Activate WonderPeaks in the upper-right corner of the notebook interface.
 4. Execute cells using `Shift+Enter` to run peak calling.
